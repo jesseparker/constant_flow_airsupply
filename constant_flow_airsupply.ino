@@ -7,12 +7,11 @@
 #define FAN_PRIMARY 3
 #define FAN_SECONDARY 6
 #define SETPOINT_PIN 3
-#define RPM_DELAY 100
 #define PASCALS_PER_BIT 10.4
-#define ZERO_OFFSET 40
 #define A1 3
 #define A2 1
-#define DENSITY_OF_AIR 1.27
+#define DENSITY_OF_AIR 1.27 // Kg/m^3
+// Equation for flow taken from https://en.wikipedia.org/wiki/Venturi_effect
 #define INSIDE_TERM (2/DENSITY_OF_AIR)*(1-(A2/A1)*(A2/A1))
 #define SIDE_TERM (DENSITY_OF_AIR/2)*(1-(A2/A1)*(A2/A1))
 #define RATIO 1.5
